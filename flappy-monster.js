@@ -8,4 +8,6 @@ function FlappyMonster(canvas) {
 
   // Game State
   game.currentState = INITIAL;
+  console.log(game);
 }
+
