@@ -58,7 +58,7 @@ FlappyMonster.prototype.drawInitialScreen = function() {
   // Text
   game.context.fillStyle = 'white';
   game.context.font = '36px Arial';
-  game.context.fillText('INITIAL', game.canvas.width / 2 - 100, game.canvas.height / 2);
+  game.context.fillText('Click to Start', game.canvas.width / 2 - 100, game.canvas.height / 2);
 }
 FlappyMonster.prototype.drawGamePlayingScreen = function() {
   // Base
