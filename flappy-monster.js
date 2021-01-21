@@ -30,6 +30,7 @@ FlappyMonster.prototype.createObjects = function() {
   // Base
   var game = this;
 
+game.background = new GameBackground('back.png', game.canvas);
   
 };
 
@@ -120,17 +121,10 @@ FlappyMonster.prototype.drawInitialScreen = function() {
 FlappyMonster.prototype.drawGamePlayingScreen = function() {
   // Base
   var game = this;
-  // Draw
 
   // Background
-  game.context.fillStyle = 'black';
-  game.context.fillRect(0, 0, game.canvas.width, game.canvas.height);
-
-  // Text
-  game.context.fillStyle = 'white';
-  game.context.font = '36px Arial';
-  game.context.fillText('GAME PLAYING', game.canvas.width / 2 - 100, game.canvas.height / 2);
-};
+    game.background.draw();
+  };
 
 
 FlappyMonster.prototype.drawGameOverScreen = function() {
