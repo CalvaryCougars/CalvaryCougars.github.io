@@ -38,6 +38,10 @@ FlappyMonster.prototype.createObjects = function() {
   game.background2 = new GameBackground('images/back.png', game.canvas);
   game.background2.x = game.canvas.width;
 
+    // Score
+  game.gameScore = new GameScore(game.canvas);
+  game.gameScore.x = game.canvas.width - 150;
+  game.gameScore.y = 80;
   
 };
 
@@ -135,6 +139,9 @@ FlappyMonster.prototype.drawGamePlayingScreen = function() {
   // Draw Background
   game.animateBackground();
   };
+// Draw Score
+  game.gameScore.draw();
+
 
 FlappyMonster.prototype.animateBackground = function() {
   // Base
