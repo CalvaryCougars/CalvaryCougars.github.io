@@ -34,8 +34,8 @@ FlappyMonster.prototype.createObjects = function() {
   // Base
   var game = this;
 
-  game.background1 = new GameBackground('images/back.png', game.canvas);
-  game.background2 = new GameBackground('images/back.png', game.canvas);
+  game.background1 = new GameBackground('back.png', game.canvas);
+  game.background2 = new GameBackground('back.png', game.canvas);
   game.background2.x = game.canvas.width;
 
     // Score
