@@ -145,6 +145,12 @@ FlappyMonster.prototype.drawGamePlayingScreen = function() {
 
 // Draw Score
   game.gameScore.draw();
+  
+   // Draw Walls
+  game.drawWalls();
+
+  console.log(game.wallFactory.walls);
+
 
 };
 
