@@ -28,6 +28,7 @@ function FlappyMonster(canvas) {
    // Create Game Objects
   game.createObjects();
   
+  
 }
 
 FlappyMonster.prototype.createObjects = function() {
@@ -46,6 +47,9 @@ FlappyMonster.prototype.createObjects = function() {
   // Wall Factory
   game.wallFactory = new WallFactory(game.canvas);
   game.wallFactory.generateWalls();
+  
+  // Monster
+  game.monster = new Monster('images/monster.png', game.canvas);
   
 };
 
@@ -149,8 +153,9 @@ FlappyMonster.prototype.drawGamePlayingScreen = function() {
    // Draw Walls
   game.drawWalls();
 
-  console.log(game.wallFactory.walls);
-
+ //console.log(game.wallFactory.walls);
+// Draw Monster
+  game.monster.draw();
 
 };
 
