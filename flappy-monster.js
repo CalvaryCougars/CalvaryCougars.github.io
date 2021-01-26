@@ -49,7 +49,7 @@ FlappyMonster.prototype.createObjects = function() {
   game.wallFactory.generateWalls();
   
   // Monster
-  game.monster = new Monster('images/monster.png', game.canvas);
+  game.monster = new Monster('monster.png', game.canvas);
   
 };
 
