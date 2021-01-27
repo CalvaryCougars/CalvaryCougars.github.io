@@ -14,7 +14,7 @@ function Monster(src, canvas) {
   // speed
   monster.vy = 0;
   //gravity
-  monster.g = 0.15;
+  monster.g = 0.20;
   //image
   monster.src = src;
   monster.img = null;
