@@ -66,6 +66,7 @@ FlappyMonster.prototype.bindEvents = function() {
         game.currentState = GAME_PLAYING;
         break;
       case GAME_PLAYING:
+        game.monster.vy = -1 * game.velocity;
         // DRAW GAME PLAYING SCREEN
         break;
     }
