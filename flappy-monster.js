@@ -46,7 +46,7 @@ FlappyMonster.prototype.createObjects = function() {
   
   // Wall Factory
   game.wallFactory = new WallFactory(game.canvas);
-  game.wallFactory.generateWalls();
+
   
   // Monster
   game.monster = new Monster('monster.png', game.canvas);
@@ -64,6 +64,7 @@ FlappyMonster.prototype.bindEvents = function() {
     switch (game.currentState) {
       case INITIAL:
         game.currentState = GAME_PLAYING;
+        game.wallFactory.generateWalls();
         break;
       case GAME_PLAYING:
         game.monster.vy = -1 * game.velocity;
