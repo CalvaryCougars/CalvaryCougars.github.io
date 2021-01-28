@@ -78,6 +78,7 @@ FlappyMonster.prototype.bindEvents = function() {
       case GAME_OVER:
         if(event.keyCode === KEY_CODE.R){
           console.log(event.keyCode);
+            game.reset();
           game.currentState = GAME_PLAYING;
         }
         break;
@@ -85,7 +86,17 @@ FlappyMonster.prototype.bindEvents = function() {
   });
 };
 
+FlappyMonster.prototype.reset = function() {
+  // Base
+  var game = this;
 
+  // Reset States
+  game.gameScore.start = new Date();
+  game.gameScore.score = 0;
+  game.wallFactory.walls = [];
+  game.monster.x = 115;
+  game.monster.y = 115;
+};
 
 
 
@@ -263,8 +274,8 @@ FlappyMonster.prototype.drawGameOverScreen = function() {
 
   // Text
   game.context.fillStyle = 'white';
-  game.context.font = '36px Arial';
-  game.context.fillText('Game Over :(', game.canvas.width / 2 - 100, game.canvas.height / 2);
+  game.context.font = '54px Arial';
+  game.context.fillText('Your Score : ' + game.gameScore.score, game.canvas.width / 2 - 180, game.canvas.height / 2 - 100);
   game.context.font = '24px Arial';
   game.context.fillText('Press R to Restart!', game.canvas.width / 2 - 100, game.canvas.height / 2 + 50);
 };
